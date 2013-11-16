@@ -21,6 +21,7 @@
 		224D781D183555D000BC8680 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 224D77FF183555D000BC8680 /* UIKit.framework */; };
 		224D7825183555D000BC8680 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 224D7823183555D000BC8680 /* InfoPlist.strings */; };
 		224D7827183555D000BC8680 /* KnobControlTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 224D7826183555D000BC8680 /* KnobControlTests.m */; };
+		224D7832183673A500BC8680 /* RWKnobControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 224D7831183673A500BC8680 /* RWKnobControl.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		224D7822183555D000BC8680 /* KnobControlTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "KnobControlTests-Info.plist"; sourceTree = "<group>"; };
 		224D7824183555D000BC8680 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		224D7826183555D000BC8680 /* KnobControlTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KnobControlTests.m; sourceTree = "<group>"; };
+		224D7830183673A500BC8680 /* RWKnobControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWKnobControl.h; sourceTree = "<group>"; };
+		224D7831183673A500BC8680 /* RWKnobControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWKnobControl.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +122,8 @@
 				224D7811183555D000BC8680 /* RWViewController.m */,
 				224D7813183555D000BC8680 /* Images.xcassets */,
 				224D7802183555D000BC8680 /* Supporting Files */,
+				224D7830183673A500BC8680 /* RWKnobControl.h */,
+				224D7831183673A500BC8680 /* RWKnobControl.m */,
 			);
 			path = KnobControl;
 			sourceTree = "<group>";
@@ -252,6 +257,7 @@
 			files = (
 				224D7808183555D000BC8680 /* main.m in Sources */,
 				224D7812183555D000BC8680 /* RWViewController.m in Sources */,
+				224D7832183673A500BC8680 /* RWKnobControl.m in Sources */,
 				224D780C183555D000BC8680 /* RWAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

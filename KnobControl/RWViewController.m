@@ -7,8 +7,11 @@
 //
 
 #import "RWViewController.h"
+#import "RWKnobControl.h"
 
-@interface RWViewController ()
+@interface RWViewController () {
+    RWKnobControl *_knobControl;
+}
 
 @end
 
@@ -17,7 +20,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    _knobControl = [[RWKnobControl alloc] initWithFrame:self.knobPlaceholder.bounds];
+    [self.knobPlaceholder addSubview:_knobControl];
 }
 
 - (void)didReceiveMemoryWarning
