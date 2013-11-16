@@ -16,9 +16,32 @@
     if (self) {
         // Initialization code
         self.backgroundColor = [UIColor blueColor];
+        
+        _minimumValue = 0.0;
+        _maximumValue = 1.0;
+        _value = 0.0;
+        _continuous = YES;
     }
     return self;
 }
+
+#pragma mark - API Methods
+- (void)setValue:(CGFloat)value animated:(BOOL)animated
+{
+    if(value != _value) {
+        // Save the value to the backing ivar
+        // Make sure we limit it to the requested bounds
+        _value = MIN(self.maximumValue, MAX(self.minimumValue, value));
+    }
+}
+
+#pragma mark - Property overrides
+- (void)setValue:(CGFloat)value
+{
+    // Chain with the animation method version
+    [self setValue:value animated:NO];
+}
+
 
 /*
 // Only override drawRect: if you perform custom drawing.
