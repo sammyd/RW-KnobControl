@@ -13,6 +13,11 @@
     RWKnobRenderer *_knobRenderer;
 }
 
+@dynamic lineWidth;
+@dynamic startAngle;
+@dynamic endAngle;
+@dynamic pointerLength;
+
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
@@ -45,7 +50,46 @@
     [self setValue:value animated:NO];
 }
 
+#pragma mark - Property proxies
+- (CGFloat)lineWidth
+{
+    return _knobRenderer.lineWidth;
+}
 
+- (void)setLineWidth:(CGFloat)lineWidth
+{
+    _knobRenderer.lineWidth = lineWidth;
+}
+
+- (CGFloat)startAngle
+{
+    return _knobRenderer.startAngle;
+}
+
+- (void)setStartAngle:(CGFloat)startAngle
+{
+    _knobRenderer.startAngle = startAngle;
+}
+
+- (CGFloat)endAngle
+{
+    return _knobRenderer.endAngle;
+}
+
+- (void)setEndAngle:(CGFloat)endAngle
+{
+    _knobRenderer.endAngle = endAngle;
+}
+
+- (CGFloat)pointerLength
+{
+    return _knobRenderer.pointerLength;
+}
+
+- (void)setPointerLength:(CGFloat)pointerLength
+{
+    _knobRenderer.pointerLength = pointerLength;
+}
 
 
 #pragma mark - Utility methods
@@ -54,9 +98,13 @@
     _knobRenderer = [[RWKnobRenderer alloc] init];
     [_knobRenderer updateWithBounds:self.bounds];
     _knobRenderer.color = self.tintColor;
+    // Set some defaults
     _knobRenderer.startAngle = -M_PI * 11 / 8.0;
     _knobRenderer.endAngle = M_PI * 3 / 8.0;
     _knobRenderer.pointerAngle = _knobRenderer.startAngle;
+    _knobRenderer.lineWidth = 2.0;
+    _knobRenderer.pointerLength = 6.0;
+    // Add the layers
     [self.layer addSublayer:_knobRenderer.trackLayer];
     [self.layer addSublayer:_knobRenderer.pointerLayer];
 }

@@ -42,4 +42,26 @@
  */
 @property (nonatomic, assign, getter = isContinuous) BOOL continuous;
 
+
+#pragma mark - Control appearance
+/**
+ Specifies the angle of the start of the knob control track. Defaults to -11π/8
+ */
+@property (nonatomic, assign) CGFloat startAngle;
+
+/**
+ Specifies the end angle of the knob control track. Defaults to 3π/8
+ */
+@property (nonatomic, assign) CGFloat endAngle;
+
+/**
+ Specifies the width in points of the knob control track. Defaults to 2.0
+ */
+@property (nonatomic, assign) CGFloat lineWidth;
+
+/**
+ Specifies the length in points of the pointer on the knob. Defaults to 6.0
+ */
+@property (nonatomic, assign) CGFloat pointerLength;
+
 @end
