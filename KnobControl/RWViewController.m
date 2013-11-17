@@ -25,6 +25,7 @@
     
     _knobControl.lineWidth = 4.0;
     _knobControl.pointerLength = 8.0;
+    self.view.tintColor = [UIColor redColor];
 }
 
 - (void)didReceiveMemoryWarning

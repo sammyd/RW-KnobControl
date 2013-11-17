@@ -50,6 +50,11 @@
     [self setValue:value animated:NO];
 }
 
+- (void)tintColorDidChange
+{
+    _knobRenderer.color = self.tintColor;
+}
+
 #pragma mark - Property proxies
 - (CGFloat)lineWidth
 {
