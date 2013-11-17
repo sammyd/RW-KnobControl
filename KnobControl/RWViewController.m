@@ -22,6 +22,9 @@
     [super viewDidLoad];
     _knobControl = [[RWKnobControl alloc] initWithFrame:self.knobPlaceholder.bounds];
     [self.knobPlaceholder addSubview:_knobControl];
+    
+    _knobControl.lineWidth = 4.0;
+    _knobControl.pointerLength = 8.0;
 }
 
 - (void)didReceiveMemoryWarning
