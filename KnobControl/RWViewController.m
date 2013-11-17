@@ -35,6 +35,7 @@
 }
 
 - (IBAction)handleValueChanged:(id)sender {
+    _knobControl.value = self.valueSlider.value;
 }
 
 - (IBAction)handleRandomButtonPressed:(id)sender {

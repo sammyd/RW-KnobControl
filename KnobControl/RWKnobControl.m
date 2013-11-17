@@ -40,6 +40,12 @@
         // Save the value to the backing ivar
         // Make sure we limit it to the requested bounds
         _value = MIN(self.maximumValue, MAX(self.minimumValue, value));
+        
+        // Now let's update the knob with the correct angle
+        CGFloat angleRange = self.endAngle - self.startAngle;
+        CGFloat valueRange = self.maximumValue - self.minimumValue;
+        CGFloat angleForValue = (_value - self.minimumValue) / valueRange * angleRange + self.startAngle;
+        _knobRenderer.pointerAngle = angleForValue;
     }
 }
 

@@ -106,4 +106,12 @@
     [self updatePointerShape];
 }
 
+- (void)setPointerAngle:(CGFloat)pointerAngle
+{
+    [CATransaction new];
+    [CATransaction setDisableActions:YES];
+    self.pointerLayer.transform = CATransform3DMakeRotation(pointerAngle, 0, 0, 1);
+    [CATransaction commit];
+}
+
 @end
