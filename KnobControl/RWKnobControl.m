@@ -45,7 +45,7 @@
         CGFloat angleRange = self.endAngle - self.startAngle;
         CGFloat valueRange = self.maximumValue - self.minimumValue;
         CGFloat angleForValue = (_value - self.minimumValue) / valueRange * angleRange + self.startAngle;
-        _knobRenderer.pointerAngle = angleForValue;
+        [_knobRenderer setPointerAngle:angleForValue animated:animated];
     }
 }
 

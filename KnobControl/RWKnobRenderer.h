@@ -25,5 +25,6 @@
 @property (nonatomic, assign) CGFloat pointerLength;
 
 - (void)updateWithBounds:(CGRect)bounds;
+- (void)setPointerAngle:(CGFloat)pointerAngle animated:(BOOL)animated;
 
 @end

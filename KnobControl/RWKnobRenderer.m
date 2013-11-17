@@ -108,10 +108,29 @@
 
 - (void)setPointerAngle:(CGFloat)pointerAngle
 {
+    [self setPointerAngle:pointerAngle animated:NO];
+}
+
+- (void)setPointerAngle:(CGFloat)pointerAngle animated:(BOOL)animated
+{
     [CATransaction new];
     [CATransaction setDisableActions:YES];
     self.pointerLayer.transform = CATransform3DMakeRotation(pointerAngle, 0, 0, 1);
+    if(animated) {
+        // Provide an animation
+        // Key-frame animation to ensure rotates in correct direction
+        CGFloat midAngle = (MAX(pointerAngle, _pointerAngle) -
+                            MIN(pointerAngle, _pointerAngle) ) / 2.f +
+        MIN(pointerAngle, _pointerAngle);
+        CAKeyframeAnimation *animation = [CAKeyframeAnimation animationWithKeyPath:@"transform.rotation.z"];
+        animation.duration = 3.f;
+        animation.values = @[@(_pointerAngle), @(midAngle), @(pointerAngle)];
+        animation.keyTimes = @[@(0), @(0.5), @(1.0)];
+        animation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+        [self.pointerLayer addAnimation:animation forKey:nil];
+    }
     [CATransaction commit];
+    _pointerAngle = pointerAngle;
 }
 
 @end

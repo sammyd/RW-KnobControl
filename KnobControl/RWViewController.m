@@ -39,5 +39,10 @@
 }
 
 - (IBAction)handleRandomButtonPressed:(id)sender {
+    // Generate random value
+    CGFloat randomValue = (arc4random() % 101) / 100.f;
+    // Then set it on the two controls
+    [_knobControl setValue:randomValue animated:self.animateSwitch.on];
+    [self.valueSlider setValue:randomValue animated:self.animateSwitch.on];
 }
 @end
