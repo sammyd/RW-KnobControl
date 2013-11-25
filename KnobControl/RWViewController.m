@@ -26,6 +26,8 @@
     _knobControl.lineWidth = 4.0;
     _knobControl.pointerLength = 8.0;
     self.view.tintColor = [UIColor redColor];
+    
+    [_knobControl addObserver:self forKeyPath:@"value" options:0 context:NULL];
 }
 
 - (void)didReceiveMemoryWarning
@@ -44,5 +46,13 @@
     // Then set it on the two controls
     [_knobControl setValue:randomValue animated:self.animateSwitch.on];
     [self.valueSlider setValue:randomValue animated:self.animateSwitch.on];
+}
+
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
+{
+    if(object == _knobControl && [keyPath isEqualToString:@"value"]) {
+        self.valueLabel.text = [NSString stringWithFormat:@"%0.2f", _knobControl.value];
+    }
 }
 @end
