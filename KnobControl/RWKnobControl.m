@@ -37,6 +37,7 @@
 - (void)setValue:(CGFloat)value animated:(BOOL)animated
 {
     if(value != _value) {
+        [self willChangeValueForKey:@"value"];
         // Save the value to the backing ivar
         // Make sure we limit it to the requested bounds
         _value = MIN(self.maximumValue, MAX(self.minimumValue, value));
@@ -46,6 +47,7 @@
         CGFloat valueRange = self.maximumValue - self.minimumValue;
         CGFloat angleForValue = (_value - self.minimumValue) / valueRange * angleRange + self.startAngle;
         [_knobRenderer setPointerAngle:angleForValue animated:animated];
+        [self didChangeValueForKey:@"value"];
     }
 }
 
@@ -128,5 +130,16 @@
     // Drawing code
 }
 */
+
++ (BOOL)automaticallyNotifiesObserversForKey:(NSString *)key
+{
+    // We'll handle KVO notifications for the value property ourselves, since
+    // we're proxying with the setValue:animated: method.
+    if ([key isEqualToString:@"value"]) {
+        return NO;
+    } else {
+        return [super automaticallyNotifiesObserversForKey:key];
+    }
+}
 
 @end
