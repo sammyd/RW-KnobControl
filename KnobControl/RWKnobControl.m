@@ -8,9 +8,11 @@
 
 #import "RWKnobControl.h"
 #import "RWKnobRenderer.h"
+#import "RWRotationGestureRecognizer.h"
 
 @implementation RWKnobControl {
     RWKnobRenderer *_knobRenderer;
+    RWRotationGestureRecognizer *_gestureRecognizer;
 }
 
 @dynamic lineWidth;
@@ -27,6 +29,8 @@
         _maximumValue = 1.0;
         _value = 0.0;
         _continuous = YES;
+        _gestureRecognizer = [[RWRotationGestureRecognizer alloc] initWithTarget:self action:@selector(handleGesture:)];
+        [self addGestureRecognizer:_gestureRecognizer];
         
         [self createKnobUI];
     }
@@ -49,6 +53,30 @@
         [_knobRenderer setPointerAngle:angleForValue animated:animated];
         [self didChangeValueForKey:@"value"];
     }
+}
+
+- (void)handleGesture:(RWRotationGestureRecognizer *)gesture
+{
+    // Mid-point angle
+    CGFloat midPointAngle = (2 * M_PI + self.startAngle - self.endAngle) / 2 + self.endAngle;
+    
+    // Ensure the angle is within a suitable range
+    CGFloat boundedAngle = gesture.touchAngle;
+    if(boundedAngle > midPointAngle) {
+        boundedAngle -= 2 * M_PI;
+    } else if (boundedAngle < (midPointAngle - 2 * M_PI)) {
+        boundedAngle += 2 * M_PI;
+    }
+    // Bound the angle to within the suitable range
+    boundedAngle = MIN(self.endAngle, MAX(self.startAngle, boundedAngle));
+    
+    // Convert the angle to a value
+    CGFloat angleRange = self.endAngle - self.startAngle;
+    CGFloat valueRange = self.maximumValue - self.minimumValue;
+    CGFloat valueForAngle = (boundedAngle - self.startAngle) / angleRange * valueRange + self.minimumValue;
+    
+    // Set the control to this value
+    self.value = valueForAngle;
 }
 
 #pragma mark - Property overrides

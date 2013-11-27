@@ -23,6 +23,7 @@
 		224D7827183555D000BC8680 /* KnobControlTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 224D7826183555D000BC8680 /* KnobControlTests.m */; };
 		224D7832183673A500BC8680 /* RWKnobControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 224D7831183673A500BC8680 /* RWKnobControl.m */; };
 		224D7835183830BF00BC8680 /* RWKnobRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 224D7834183830BF00BC8680 /* RWKnobRenderer.m */; };
+		2285944718454DDB00CF3D01 /* RWRotationGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2285944618454DDB00CF3D01 /* RWRotationGestureRecognizer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,8 @@
 		224D7831183673A500BC8680 /* RWKnobControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWKnobControl.m; sourceTree = "<group>"; };
 		224D7833183830BF00BC8680 /* RWKnobRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWKnobRenderer.h; sourceTree = "<group>"; };
 		224D7834183830BF00BC8680 /* RWKnobRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWKnobRenderer.m; sourceTree = "<group>"; };
+		2285944518454DDB00CF3D01 /* RWRotationGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWRotationGestureRecognizer.h; sourceTree = "<group>"; };
+		2285944618454DDB00CF3D01 /* RWRotationGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWRotationGestureRecognizer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +132,8 @@
 				224D7831183673A500BC8680 /* RWKnobControl.m */,
 				224D7833183830BF00BC8680 /* RWKnobRenderer.h */,
 				224D7834183830BF00BC8680 /* RWKnobRenderer.m */,
+				2285944518454DDB00CF3D01 /* RWRotationGestureRecognizer.h */,
+				2285944618454DDB00CF3D01 /* RWRotationGestureRecognizer.m */,
 			);
 			path = KnobControl;
 			sourceTree = "<group>";
@@ -264,6 +269,7 @@
 				224D7808183555D000BC8680 /* main.m in Sources */,
 				224D7812183555D000BC8680 /* RWViewController.m in Sources */,
 				224D7832183673A500BC8680 /* RWKnobControl.m in Sources */,
+				2285944718454DDB00CF3D01 /* RWRotationGestureRecognizer.m in Sources */,
 				224D780C183555D000BC8680 /* RWAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
