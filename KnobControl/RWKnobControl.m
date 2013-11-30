@@ -77,6 +77,17 @@
     
     // Set the control to this value
     self.value = valueForAngle;
+    
+    // Notify of value change
+    if (self.continuous) {
+        [self sendActionsForControlEvents:UIControlEventValueChanged];
+    } else {
+        // Only send an update if the gesture has completed
+        if(_gestureRecognizer.state == UIGestureRecognizerStateEnded
+           || _gestureRecognizer.state == UIGestureRecognizerStateCancelled) {
+            [self sendActionsForControlEvents:UIControlEventValueChanged];
+        }
+    }
 }
 
 #pragma mark - Property overrides

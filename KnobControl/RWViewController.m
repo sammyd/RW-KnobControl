@@ -28,6 +28,11 @@
     self.view.tintColor = [UIColor redColor];
     
     [_knobControl addObserver:self forKeyPath:@"value" options:0 context:NULL];
+    
+    // Hooks up the knob control
+    [_knobControl addTarget:self
+                     action:@selector(handleValueChanged:)
+           forControlEvents:UIControlEventValueChanged];
 }
 
 - (void)didReceiveMemoryWarning
@@ -37,7 +42,11 @@
 }
 
 - (IBAction)handleValueChanged:(id)sender {
-    _knobControl.value = self.valueSlider.value;
+    if(sender == self.valueSlider) {
+        _knobControl.value = self.valueSlider.value;
+    } else if(sender == _knobControl) {
+        self.valueSlider.value = _knobControl.value;
+    }
 }
 
 - (IBAction)handleRandomButtonPressed:(id)sender {
