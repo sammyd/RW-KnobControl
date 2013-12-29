@@ -8,14 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		221397F51870CACD0072951C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 224D77FB183555D000BC8680 /* Foundation.framework */; };
-		221397FA1870CACD0072951C /* RWKnobControl.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 221397F91870CACD0072951C /* RWKnobControl.h */; };
-		221397FC1870CACD0072951C /* RWKnobControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 221397FB1870CACD0072951C /* RWKnobControl.m */; };
 		221398021870CACD0072951C /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 224D781A183555D000BC8680 /* XCTest.framework */; };
 		221398031870CACD0072951C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 224D77FB183555D000BC8680 /* Foundation.framework */; };
 		221398041870CACD0072951C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 224D77FF183555D000BC8680 /* UIKit.framework */; };
 		221398071870CACD0072951C /* libRWKnobControl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 221397F41870CACD0072951C /* libRWKnobControl.a */; };
 		2213980D1870CACD0072951C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2213980B1870CACD0072951C /* InfoPlist.strings */; };
 		2213980F1870CACD0072951C /* RWKnobControlTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2213980E1870CACD0072951C /* RWKnobControlTests.m */; };
+		221398161870DA9F0072951C /* RWKnobControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 224D7831183673A500BC8680 /* RWKnobControl.m */; };
+		221398171870DAA30072951C /* RWKnobRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 224D7834183830BF00BC8680 /* RWKnobRenderer.m */; };
+		221398181870DAA80072951C /* RWRotationGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2285944618454DDB00CF3D01 /* RWRotationGestureRecognizer.m */; };
+		2213981A1870DC7C0072951C /* RWKnobControl.h in Headers */ = {isa = PBXBuildFile; fileRef = 224D7830183673A500BC8680 /* RWKnobControl.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2213981B1870DC7C0072951C /* RWKnobRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 224D7833183830BF00BC8680 /* RWKnobRenderer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2213981C1870DC7C0072951C /* RWRotationGestureRecognizer.h in Headers */ = {isa = PBXBuildFile; fileRef = 2285944518454DDB00CF3D01 /* RWRotationGestureRecognizer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		224D77FC183555D000BC8680 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 224D77FB183555D000BC8680 /* Foundation.framework */; };
 		224D77FE183555D000BC8680 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 224D77FD183555D000BC8680 /* CoreGraphics.framework */; };
 		224D7800183555D000BC8680 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 224D77FF183555D000BC8680 /* UIKit.framework */; };
@@ -59,7 +63,6 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
-				221397FA1870CACD0072951C /* RWKnobControl.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,8 +71,6 @@
 /* Begin PBXFileReference section */
 		221397F41870CACD0072951C /* libRWKnobControl.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRWKnobControl.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		221397F81870CACD0072951C /* RWKnobControl-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RWKnobControl-Prefix.pch"; sourceTree = "<group>"; };
-		221397F91870CACD0072951C /* RWKnobControl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RWKnobControl.h; sourceTree = "<group>"; };
-		221397FB1870CACD0072951C /* RWKnobControl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RWKnobControl.m; sourceTree = "<group>"; };
 		221398011870CACD0072951C /* RWKnobControlTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RWKnobControlTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2213980A1870CACD0072951C /* RWKnobControlTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RWKnobControlTests-Info.plist"; sourceTree = "<group>"; };
 		2213980C1870CACD0072951C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -147,8 +148,6 @@
 		221397F61870CACD0072951C /* RWKnobControl */ = {
 			isa = PBXGroup;
 			children = (
-				221397F91870CACD0072951C /* RWKnobControl.h */,
-				221397FB1870CACD0072951C /* RWKnobControl.m */,
 				221397F71870CACD0072951C /* Supporting Files */,
 			);
 			path = RWKnobControl;
@@ -265,6 +264,19 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		221398191870DBD60072951C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2213981A1870DC7C0072951C /* RWKnobControl.h in Headers */,
+				2213981B1870DC7C0072951C /* RWKnobRenderer.h in Headers */,
+				2213981C1870DC7C0072951C /* RWRotationGestureRecognizer.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
 		221397F31870CACD0072951C /* RWKnobControl */ = {
 			isa = PBXNativeTarget;
@@ -273,6 +285,7 @@
 				221397F01870CACD0072951C /* Sources */,
 				221397F11870CACD0072951C /* Frameworks */,
 				221397F21870CACD0072951C /* CopyFiles */,
+				221398191870DBD60072951C /* Headers */,
 			);
 			buildRules = (
 			);
@@ -409,7 +422,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				221397FC1870CACD0072951C /* RWKnobControl.m in Sources */,
+				221398161870DA9F0072951C /* RWKnobControl.m in Sources */,
+				221398181870DAA80072951C /* RWRotationGestureRecognizer.m in Sources */,
+				221398171870DAA30072951C /* RWKnobRenderer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -497,6 +512,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = NO;
 				DSTROOT = /tmp/RWKnobControl.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RWKnobControl/RWKnobControl-Prefix.pch";
@@ -506,7 +523,9 @@
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(PRODUCT_NAME)Headers";
 				SKIP_INSTALL = YES;
+				STRIP_STYLE = "non-global";
 			};
 			name = Debug;
 		};
@@ -514,12 +533,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = NO;
 				DSTROOT = /tmp/RWKnobControl.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RWKnobControl/RWKnobControl-Prefix.pch";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(PRODUCT_NAME)Headers";
 				SKIP_INSTALL = YES;
+				STRIP_STYLE = "non-global";
 			};
 			name = Release;
 		};
