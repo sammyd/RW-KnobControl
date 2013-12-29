@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		221397F51870CACD0072951C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 224D77FB183555D000BC8680 /* Foundation.framework */; };
+		221397FA1870CACD0072951C /* RWKnobControl.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 221397F91870CACD0072951C /* RWKnobControl.h */; };
+		221397FC1870CACD0072951C /* RWKnobControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 221397FB1870CACD0072951C /* RWKnobControl.m */; };
+		221398021870CACD0072951C /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 224D781A183555D000BC8680 /* XCTest.framework */; };
+		221398031870CACD0072951C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 224D77FB183555D000BC8680 /* Foundation.framework */; };
+		221398041870CACD0072951C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 224D77FF183555D000BC8680 /* UIKit.framework */; };
+		221398071870CACD0072951C /* libRWKnobControl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 221397F41870CACD0072951C /* libRWKnobControl.a */; };
+		2213980D1870CACD0072951C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2213980B1870CACD0072951C /* InfoPlist.strings */; };
+		2213980F1870CACD0072951C /* RWKnobControlTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2213980E1870CACD0072951C /* RWKnobControlTests.m */; };
 		224D77FC183555D000BC8680 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 224D77FB183555D000BC8680 /* Foundation.framework */; };
 		224D77FE183555D000BC8680 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 224D77FD183555D000BC8680 /* CoreGraphics.framework */; };
 		224D7800183555D000BC8680 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 224D77FF183555D000BC8680 /* UIKit.framework */; };
@@ -27,6 +36,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		221398051870CACD0072951C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 224D77F0183555D000BC8680 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 221397F31870CACD0072951C;
+			remoteInfo = RWKnobControl;
+		};
 		224D781E183555D000BC8680 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 224D77F0183555D000BC8680 /* Project object */;
@@ -36,7 +52,28 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		221397F21870CACD0072951C /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				221397FA1870CACD0072951C /* RWKnobControl.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		221397F41870CACD0072951C /* libRWKnobControl.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRWKnobControl.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		221397F81870CACD0072951C /* RWKnobControl-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RWKnobControl-Prefix.pch"; sourceTree = "<group>"; };
+		221397F91870CACD0072951C /* RWKnobControl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RWKnobControl.h; sourceTree = "<group>"; };
+		221397FB1870CACD0072951C /* RWKnobControl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RWKnobControl.m; sourceTree = "<group>"; };
+		221398011870CACD0072951C /* RWKnobControlTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RWKnobControlTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2213980A1870CACD0072951C /* RWKnobControlTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RWKnobControlTests-Info.plist"; sourceTree = "<group>"; };
+		2213980C1870CACD0072951C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		2213980E1870CACD0072951C /* RWKnobControlTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RWKnobControlTests.m; sourceTree = "<group>"; };
 		224D77F8183555D000BC8680 /* KnobControl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KnobControl.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		224D77FB183555D000BC8680 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		224D77FD183555D000BC8680 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -65,6 +102,25 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		221397F11870CACD0072951C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				221397F51870CACD0072951C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		221397FE1870CACD0072951C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				221398071870CACD0072951C /* libRWKnobControl.a in Frameworks */,
+				221398021870CACD0072951C /* XCTest.framework in Frameworks */,
+				221398041870CACD0072951C /* UIKit.framework in Frameworks */,
+				221398031870CACD0072951C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		224D77F5183555D000BC8680 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -88,11 +144,49 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		221397F61870CACD0072951C /* RWKnobControl */ = {
+			isa = PBXGroup;
+			children = (
+				221397F91870CACD0072951C /* RWKnobControl.h */,
+				221397FB1870CACD0072951C /* RWKnobControl.m */,
+				221397F71870CACD0072951C /* Supporting Files */,
+			);
+			path = RWKnobControl;
+			sourceTree = "<group>";
+		};
+		221397F71870CACD0072951C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				221397F81870CACD0072951C /* RWKnobControl-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		221398081870CACD0072951C /* RWKnobControlTests */ = {
+			isa = PBXGroup;
+			children = (
+				2213980E1870CACD0072951C /* RWKnobControlTests.m */,
+				221398091870CACD0072951C /* Supporting Files */,
+			);
+			path = RWKnobControlTests;
+			sourceTree = "<group>";
+		};
+		221398091870CACD0072951C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2213980A1870CACD0072951C /* RWKnobControlTests-Info.plist */,
+				2213980B1870CACD0072951C /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		224D77EF183555D000BC8680 = {
 			isa = PBXGroup;
 			children = (
 				224D7801183555D000BC8680 /* KnobControl */,
 				224D7820183555D000BC8680 /* KnobControlTests */,
+				221397F61870CACD0072951C /* RWKnobControl */,
+				221398081870CACD0072951C /* RWKnobControlTests */,
 				224D77FA183555D000BC8680 /* Frameworks */,
 				224D77F9183555D000BC8680 /* Products */,
 			);
@@ -103,6 +197,8 @@
 			children = (
 				224D77F8183555D000BC8680 /* KnobControl.app */,
 				224D7819183555D000BC8680 /* KnobControlTests.xctest */,
+				221397F41870CACD0072951C /* libRWKnobControl.a */,
+				221398011870CACD0072951C /* RWKnobControlTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -170,6 +266,41 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		221397F31870CACD0072951C /* RWKnobControl */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 221398141870CACD0072951C /* Build configuration list for PBXNativeTarget "RWKnobControl" */;
+			buildPhases = (
+				221397F01870CACD0072951C /* Sources */,
+				221397F11870CACD0072951C /* Frameworks */,
+				221397F21870CACD0072951C /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RWKnobControl;
+			productName = RWKnobControl;
+			productReference = 221397F41870CACD0072951C /* libRWKnobControl.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		221398001870CACD0072951C /* RWKnobControlTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 221398151870CACD0072951C /* Build configuration list for PBXNativeTarget "RWKnobControlTests" */;
+			buildPhases = (
+				221397FD1870CACD0072951C /* Sources */,
+				221397FE1870CACD0072951C /* Frameworks */,
+				221397FF1870CACD0072951C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				221398061870CACD0072951C /* PBXTargetDependency */,
+			);
+			name = RWKnobControlTests;
+			productName = RWKnobControlTests;
+			productReference = 221398011870CACD0072951C /* RWKnobControlTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		224D77F7183555D000BC8680 /* KnobControl */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 224D782A183555D000BC8680 /* Build configuration list for PBXNativeTarget "KnobControl" */;
@@ -215,6 +346,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = RayWenderlich;
 				TargetAttributes = {
+					221398001870CACD0072951C = {
+						TestTargetID = 224D77F7183555D000BC8680;
+					};
 					224D7818183555D000BC8680 = {
 						TestTargetID = 224D77F7183555D000BC8680;
 					};
@@ -235,11 +369,21 @@
 			targets = (
 				224D77F7183555D000BC8680 /* KnobControl */,
 				224D7818183555D000BC8680 /* KnobControlTests */,
+				221397F31870CACD0072951C /* RWKnobControl */,
+				221398001870CACD0072951C /* RWKnobControlTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		221397FF1870CACD0072951C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2213980D1870CACD0072951C /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		224D77F6183555D000BC8680 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -261,6 +405,22 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		221397F01870CACD0072951C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				221397FC1870CACD0072951C /* RWKnobControl.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		221397FD1870CACD0072951C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2213980F1870CACD0072951C /* RWKnobControlTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		224D77F4183555D000BC8680 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -285,6 +445,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		221398061870CACD0072951C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 221397F31870CACD0072951C /* RWKnobControl */;
+			targetProxy = 221398051870CACD0072951C /* PBXContainerItemProxy */;
+		};
 		224D781F183555D000BC8680 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 224D77F7183555D000BC8680 /* KnobControl */;
@@ -293,6 +458,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		2213980B1870CACD0072951C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2213980C1870CACD0072951C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 		224D7804183555D000BC8680 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -320,6 +493,78 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		221398101870CACD0072951C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				DSTROOT = /tmp/RWKnobControl.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RWKnobControl/RWKnobControl-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		221398111870CACD0072951C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				DSTROOT = /tmp/RWKnobControl.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RWKnobControl/RWKnobControl-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		221398121870CACD0072951C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/KnobControl.app/KnobControl";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RWKnobControl/RWKnobControl-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "RWKnobControlTests/RWKnobControlTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		221398131870CACD0072951C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/KnobControl.app/KnobControl";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RWKnobControl/RWKnobControl-Prefix.pch";
+				INFOPLIST_FILE = "RWKnobControlTests/RWKnobControlTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
 		224D7828183555D000BC8680 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -465,6 +710,22 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		221398141870CACD0072951C /* Build configuration list for PBXNativeTarget "RWKnobControl" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				221398101870CACD0072951C /* Debug */,
+				221398111870CACD0072951C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		221398151870CACD0072951C /* Build configuration list for PBXNativeTarget "RWKnobControlTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				221398121870CACD0072951C /* Debug */,
+				221398131870CACD0072951C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		224D77F3183555D000BC8680 /* Build configuration list for PBXProject "KnobControl" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

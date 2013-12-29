@@ -38,6 +38,16 @@
                ReferencedContainer = "container:KnobControl.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "221398001870CACD0072951C"
+               BuildableName = "RWKnobControlTests.xctest"
+               BlueprintName = "RWKnobControlTests"
+               ReferencedContainer = "container:KnobControl.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
