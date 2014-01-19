@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Framework.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
 		<key>KnobControl.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -23,6 +28,11 @@
 			<true/>
 		</dict>
 		<key>221398001870CACD0072951C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>2213982018722CA20072951C</key>
 		<dict>
 			<key>primary</key>
 			<true/>

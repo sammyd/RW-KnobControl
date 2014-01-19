@@ -6,6 +6,21 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		2213982018722CA20072951C /* Framework */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 2213982118722CA20072951C /* Build configuration list for PBXAggregateTarget "Framework" */;
+			buildPhases = (
+				2213982618722D340072951C /* Build Framework */,
+			);
+			dependencies = (
+				2213982518722CC80072951C /* PBXTargetDependency */,
+			);
+			name = Framework;
+			productName = Framework;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		221397F51870CACD0072951C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 224D77FB183555D000BC8680 /* Foundation.framework */; };
 		221398021870CACD0072951C /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 224D781A183555D000BC8680 /* XCTest.framework */; };
@@ -20,6 +35,8 @@
 		2213981A1870DC7C0072951C /* RWKnobControl.h in Headers */ = {isa = PBXBuildFile; fileRef = 224D7830183673A500BC8680 /* RWKnobControl.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2213981B1870DC7C0072951C /* RWKnobRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 224D7833183830BF00BC8680 /* RWKnobRenderer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2213981C1870DC7C0072951C /* RWRotationGestureRecognizer.h in Headers */ = {isa = PBXBuildFile; fileRef = 2285944518454DDB00CF3D01 /* RWRotationGestureRecognizer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2213981E1872136A0072951C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 224D77FF183555D000BC8680 /* UIKit.framework */; };
+		2213981F1872137E0072951C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 224D77FD183555D000BC8680 /* CoreGraphics.framework */; };
 		224D77FC183555D000BC8680 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 224D77FB183555D000BC8680 /* Foundation.framework */; };
 		224D77FE183555D000BC8680 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 224D77FD183555D000BC8680 /* CoreGraphics.framework */; };
 		224D7800183555D000BC8680 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 224D77FF183555D000BC8680 /* UIKit.framework */; };
@@ -41,6 +58,13 @@
 
 /* Begin PBXContainerItemProxy section */
 		221398051870CACD0072951C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 224D77F0183555D000BC8680 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 221397F31870CACD0072951C;
+			remoteInfo = RWKnobControl;
+		};
+		2213982418722CC80072951C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 224D77F0183555D000BC8680 /* Project object */;
 			proxyType = 1;
@@ -107,6 +131,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2213981F1872137E0072951C /* CoreGraphics.framework in Frameworks */,
+				2213981E1872136A0072951C /* UIKit.framework in Frameworks */,
 				221397F51870CACD0072951C /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -286,6 +312,7 @@
 				221397F11870CACD0072951C /* Frameworks */,
 				221397F21870CACD0072951C /* CopyFiles */,
 				221398191870DBD60072951C /* Headers */,
+				2213981D18720DF30072951C /* Prepare framework */,
 			);
 			buildRules = (
 			);
@@ -384,6 +411,7 @@
 				224D7818183555D000BC8680 /* KnobControlTests */,
 				221397F31870CACD0072951C /* RWKnobControl */,
 				221398001870CACD0072951C /* RWKnobControlTests */,
+				2213982018722CA20072951C /* Framework */,
 			);
 		};
 /* End PBXProject section */
@@ -416,6 +444,37 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2213981D18720DF30072951C /* Prepare framework */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Prepare framework";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\n\nmkdir -p \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/Versions/A/Headers\"\n\n# Link the \"Current\" version to \"A\"\n/bin/ln -sfh A \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/Versions/Current\"\n/bin/ln -sfh Versions/Current/Headers \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/Headers\"\n/bin/ln -sfh \"Versions/Current/${PRODUCT_NAME}\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/${PRODUCT_NAME}\"\n\n# The -a ensures that the headers maintain the source modification date so that we don't constantly\n# cause propagating rebuilds of files that import these headers.\n/bin/cp -a \"${TARGET_BUILD_DIR}/${PUBLIC_HEADERS_FOLDER_PATH}/\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/Versions/A/Headers\"\n";
+		};
+		2213982618722D340072951C /* Build Framework */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Build Framework";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\nset +u\n# Avoid recursively calling this script.\nif [[ $SF_MASTER_SCRIPT_RUNNING ]]\nthen\nexit 0\nfi\nset -u\nexport SF_MASTER_SCRIPT_RUNNING=1\n\nSF_TARGET_NAME=RW${PROJECT_NAME}\nSF_EXECUTABLE_PATH=\"lib${SF_TARGET_NAME}.a\"\nSF_WRAPPER_NAME=\"${SF_TARGET_NAME}.framework\"\n\n# The following conditionals come from\n# https://github.com/kstenerud/iOS-Universal-Framework\n\nif [[ \"$SDK_NAME\" =~ ([A-Za-z]+) ]]\nthen\nSF_SDK_PLATFORM=${BASH_REMATCH[1]}\nelse\necho \"Could not find platform name from SDK_NAME: $SDK_NAME\"\nexit 1\nfi\n\nif [[ \"$SDK_NAME\" =~ ([0-9]+.*$) ]]\nthen\nSF_SDK_VERSION=${BASH_REMATCH[1]}\nelse\necho \"Could not find sdk version from SDK_NAME: $SDK_NAME\"\nexit 1\nfi\n\nif [[ \"$SF_SDK_PLATFORM\" = \"iphoneos\" ]]\nthen\nSF_OTHER_PLATFORM=iphonesimulator\nelse\nSF_OTHER_PLATFORM=iphoneos\nfi\n\nif [[ \"$BUILT_PRODUCTS_DIR\" =~ (.*)$SF_SDK_PLATFORM$ ]]\nthen\nSF_OTHER_BUILT_PRODUCTS_DIR=\"${BASH_REMATCH[1]}${SF_OTHER_PLATFORM}\"\nelse\necho \"Could not find platform name from build products directory: $BUILT_PRODUCTS_DIR\"\nexit 1\nfi\n\n# Build the other platform.\nxcodebuild -project \"${PROJECT_FILE_PATH}\" -target \"${TARGET_NAME}\" -configuration \"${CONFIGURATION}\" -sdk ${SF_OTHER_PLATFORM}${SF_SDK_VERSION} BUILD_DIR=\"${BUILD_DIR}\" OBJROOT=\"${OBJROOT}\" BUILD_ROOT=\"${BUILD_ROOT}\" SYMROOT=\"${SYMROOT}\" $ACTION\n\n# Smash the two static libraries into one fat binary and store it in the .framework\nlipo -create \"${BUILT_PRODUCTS_DIR}/${SF_EXECUTABLE_PATH}\" \"${SF_OTHER_BUILT_PRODUCTS_DIR}/${SF_EXECUTABLE_PATH}\" -output \"${BUILT_PRODUCTS_DIR}/${SF_WRAPPER_NAME}/Versions/A/${SF_TARGET_NAME}\"\n\n# Copy the binary to the other architecture folder to have a complete framework in both.\ncp -a \"${BUILT_PRODUCTS_DIR}/${SF_WRAPPER_NAME}/Versions/A/${SF_TARGET_NAME}\" \"${SF_OTHER_BUILT_PRODUCTS_DIR}/${SF_WRAPPER_NAME}/Versions/A/${SF_TARGET_NAME}\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		221397F01870CACD0072951C /* Sources */ = {
@@ -464,6 +523,11 @@
 			isa = PBXTargetDependency;
 			target = 221397F31870CACD0072951C /* RWKnobControl */;
 			targetProxy = 221398051870CACD0072951C /* PBXContainerItemProxy */;
+		};
+		2213982518722CC80072951C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 221397F31870CACD0072951C /* RWKnobControl */;
+			targetProxy = 2213982418722CC80072951C /* PBXContainerItemProxy */;
 		};
 		224D781F183555D000BC8680 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -585,6 +649,20 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+		2213982218722CA20072951C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		2213982318722CA20072951C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
 		};
@@ -740,6 +818,7 @@
 				221398111870CACD0072951C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		221398151870CACD0072951C /* Build configuration list for PBXNativeTarget "RWKnobControlTests" */ = {
 			isa = XCConfigurationList;
@@ -748,6 +827,16 @@
 				221398131870CACD0072951C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2213982118722CA20072951C /* Build configuration list for PBXAggregateTarget "Framework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2213982218722CA20072951C /* Debug */,
+				2213982318722CA20072951C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		224D77F3183555D000BC8680 /* Build configuration list for PBXProject "KnobControl" */ = {
 			isa = XCConfigurationList;
