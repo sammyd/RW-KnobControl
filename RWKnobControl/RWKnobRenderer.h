@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 RayWenderlich. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface RWKnobRenderer : NSObject
 

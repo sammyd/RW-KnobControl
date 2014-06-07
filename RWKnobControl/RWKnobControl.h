@@ -24,7 +24,7 @@ IB_DESIGNABLE
 /**
  Contains the current value
  */
-@property (nonatomic, assign) CGFloat value;
+@property (nonatomic, assign) IBInspectable CGFloat value;
 
 
 /**
@@ -37,12 +37,12 @@ IB_DESIGNABLE
 /**
  The minimum value of the knob. Defaults to 0.
  */
-@property (nonatomic, assign) CGFloat minimumValue;
+@property (nonatomic, assign) IBInspectable CGFloat minimumValue;
 
 /**
  The maximum value of the knob. Defaults to 1.
  */
-@property (nonatomic, assign) CGFloat maximumValue;
+@property (nonatomic, assign) IBInspectable CGFloat maximumValue;
 
 
 #pragma mark - Knob Behavior
@@ -57,21 +57,21 @@ IB_DESIGNABLE
 /**
  Specifies the angle of the start of the knob control track. Defaults to -11π/8
  */
-@property (nonatomic, assign) CGFloat startAngle;
+@property (nonatomic, assign) IBInspectable CGFloat startAngle;
 
 /**
  Specifies the end angle of the knob control track. Defaults to 3π/8
  */
-@property (nonatomic, assign) CGFloat endAngle;
+@property (nonatomic, assign) IBInspectable CGFloat endAngle;
 
 /**
  Specifies the width in points of the knob control track. Defaults to 2.0
  */
-@property (nonatomic, assign) CGFloat lineWidth;
+@property (nonatomic, assign) IBInspectable CGFloat lineWidth;
 
 /**
  Specifies the length in points of the pointer on the knob. Defaults to 6.0
  */
-@property (nonatomic, assign) CGFloat pointerLength;
+@property (nonatomic, assign) IBInspectable CGFloat pointerLength;
 
 @end
