@@ -9,6 +9,11 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>RWKnobControl.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
@@ -18,6 +23,16 @@
 			<true/>
 		</dict>
 		<key>224D7818183555D000BC8680</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>22804B3519429A6E00E00B74</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>22804B3F19429A6E00E00B74</key>
 		<dict>
 			<key>primary</key>
 			<true/>

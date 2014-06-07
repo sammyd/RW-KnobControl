@@ -1,13 +1,23 @@
 //
 //  RWKnobControl.h
-//  KnobControl
+//  RWKnobControl
 //
-//  Created by Sam Davies on 15/11/2013.
-//  Copyright (c) 2013 RayWenderlich. All rights reserved.
+//  Created by Sam Davies on 06/06/2014.
+//  Copyright (c) 2014 RayWenderlich. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
+//! Project version number for RWKnobControl.
+FOUNDATION_EXPORT double RWKnobControlVersionNumber;
+
+//! Project version string for RWKnobControl.
+FOUNDATION_EXPORT const unsigned char RWKnobControlVersionString[];
+
+// In this header, you should import all the public headers of your framework using statements like #import <RWKnobControl/PublicHeader.h>
+
+
+IB_DESIGNABLE
 @interface RWKnobControl : UIControl
 
 #pragma mark - Knob value
