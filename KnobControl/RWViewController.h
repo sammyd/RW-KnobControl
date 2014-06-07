@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "RWKnobControl.h"
 
 @interface RWViewController : UIViewController
 
-@property (weak, nonatomic) IBOutlet UIView *knobPlaceholder;
+@property (weak, nonatomic) IBOutlet RWKnobControl *knobControl;
 @property (weak, nonatomic) IBOutlet UILabel *valueLabel;
 @property (weak, nonatomic) IBOutlet UISlider *valueSlider;
 @property (weak, nonatomic) IBOutlet UISwitch *animateSwitch;

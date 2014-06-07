@@ -24,17 +24,31 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        // Initialization code
-        _minimumValue = 0.0;
-        _maximumValue = 1.0;
-        _value = 0.0;
-        _continuous = YES;
-        _gestureRecognizer = [[RWRotationGestureRecognizer alloc] initWithTarget:self action:@selector(handleGesture:)];
-        [self addGestureRecognizer:_gestureRecognizer];
-        
-        [self createKnobUI];
+      [self commonInit];
     }
     return self;
+}
+
+- (id)initWithCoder:(NSCoder *)aDecoder
+{
+  self = [super initWithCoder:aDecoder];
+  if(self) {
+    [self commonInit];
+  }
+  return self;
+}
+
+- (void)commonInit
+{
+  // Initialization code
+  _minimumValue = 0.0;
+  _maximumValue = 1.0;
+  _value = 0.0;
+  _continuous = YES;
+  _gestureRecognizer = [[RWRotationGestureRecognizer alloc] initWithTarget:self action:@selector(handleGesture:)];
+  [self addGestureRecognizer:_gestureRecognizer];
+  
+  [self createKnobUI];
 }
 
 #pragma mark - API Methods
@@ -88,6 +102,12 @@
             [self sendActionsForControlEvents:UIControlEventValueChanged];
         }
     }
+}
+
+- (void)layoutSubviews
+{
+  [super layoutSubviews];
+  [_knobRenderer updateWithBounds:self.bounds];
 }
 
 #pragma mark - Property overrides
